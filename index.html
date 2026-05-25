@@ -3,230 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>The Handel Project</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-    background:#0d0d0d;
-    color:#f2f2f2;
-    font-family: Georgia, serif;
-    line-height:1.6;
+  background:#0b0b0b;
+  color:#f1f1f1;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.55;
 }
 
 .hero{
-    height:100vh;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:
-        linear-gradient(
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.70)
-        ),
-        url("images/hero-london.jpg");
-    background-size:cover;
-    background-position:center;
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.25) 100%),
+    url("images/hero-london.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:4rem 7vw;
 }
 
 .hero-content{
-    max-width:800px;
-    padding:2rem;
+  max-width:620px;
 }
 
-.hero h1{
-    font-size:4rem;
-    letter-spacing:.15em;
-    margin-bottom:1rem;
-    font-weight:300;
+h1{
+  font-family:Georgia, serif;
+  font-size:4.2rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  line-height:1;
+  margin-bottom:1.2rem;
 }
 
 .tagline{
-    color:#d4b36a;
-    font-size:1.2rem;
-    margin-bottom:2rem;
-    letter-spacing:.08em;
+  color:#d6b35f;
+  font-size:1.15rem;
+  letter-spacing:.08em;
+  margin-bottom:2rem;
 }
 
 .statement{
-    max-width:700px;
-    margin:auto;
-    color:#dddddd;
-    font-size:1rem;
+  color:#d8d8d8;
+  font-size:1rem;
+  max-width:580px;
 }
 
 .section{
-    max-width:1200px;
-    margin:auto;
-    padding:6rem 2rem;
+  max-width:1180px;
+  margin:auto;
+  padding:4rem 5vw 5rem;
+}
+
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:2rem;
 }
 
 .section h2{
-    font-size:2rem;
-    margin-bottom:3rem;
-    font-weight:300;
-    text-align:center;
+  font-family:Georgia, serif;
+  font-size:2.2rem;
+  font-weight:300;
+}
+
+.section-note{
+  color:#888;
+  font-size:.9rem;
 }
 
 .releases{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:3rem;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.6rem;
 }
 
 .card{
-    background:#141414;
-    border:1px solid #222;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
+  background:#141414;
+  border:1px solid #252525;
 }
 
 .card img{
-    width:100%;
-    display:block;
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+  filter:grayscale(100%);
 }
 
 .card-content{
-    padding:1.5rem;
+  padding:1.25rem;
 }
 
 .card h3{
-    margin-bottom:.5rem;
-    font-size:1.5rem;
-    font-weight:400;
+  font-family:Georgia, serif;
+  font-size:1.45rem;
+  font-weight:300;
+  margin-bottom:.4rem;
 }
 
 .card p{
-    color:#cccccc;
-    margin-bottom:1rem;
+  color:#c8c8c8;
+  font-size:.95rem;
+  margin-bottom:1rem;
 }
 
 .button{
-    display:inline-block;
-    text-decoration:none;
-    color:#d4b36a;
+  color:#d6b35f;
+  text-decoration:none;
+  font-size:.9rem;
+  letter-spacing:.04em;
 }
 
 .footer{
-    text-align:center;
-    color:#777;
-    padding:4rem 2rem;
-    border-top:1px solid #222;
+  padding:2.5rem 5vw;
+  color:#777;
+  border-top:1px solid #222;
+  font-size:.85rem;
 }
 
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:2.5rem;
-    }
-
-    .tagline{
-        font-size:1rem;
-    }
-
+@media(max-width:900px){
+  .releases{grid-template-columns:1fr}
+  .card img{height:380px}
+  h1{font-size:3rem}
+  .hero{min-height:72vh}
+  .section-header{display:block}
+  .section-note{margin-top:.5rem}
 }
-
 </style>
 </head>
 
 <body>
 
 <section class="hero">
+  <div class="hero-content">
+    <h1>THE HANDEL PROJECT</h1>
+    <div class="tagline">Recasting Baroque voices in contemporary sonic landscapes</div>
 
-<div class="hero-content">
-
-<h1>THE HANDEL PROJECT</h1>
-
-<div class="tagline">
-Recasting Baroque voices in contemporary sonic landscapes
-</div>
-
-<div class="statement">
-
-The Handel Project is a recording vehicle created by Rodolphe El Khoury to bring the music of George Frideric Handel and other Baroque composers into a contemporary sonic landscape. The project translates selected works into a modern idiom through new arrangements that preserve their underlying structure and emotional character while reconfiguring their musical surface.
-
-<br><br>
-
-Using digital production techniques and AI-assisted performance, The Handel Project bridges historical material and present-day sound practices. It does not seek to reproduce the originals, but to extend them—retaining their expressive logic while situating them within contemporary modes of listening and production.
-
-</div>
-
-</div>
-
+    <div class="statement">
+      The Handel Project is a recording vehicle created by Rodolphe El Khoury to bring the music of George Frideric Handel and other Baroque composers into a contemporary sonic landscape. The project translates selected works into a modern idiom through new arrangements that preserve their underlying structure and emotional character while reconfiguring their musical surface.
+      <br><br>
+      Using digital production techniques and AI-assisted performance, The Handel Project bridges historical material and present-day sound practices. It does not seek to reproduce the originals, but to extend them—retaining their expressive logic while situating them within contemporary modes of listening and production.
+    </div>
+  </div>
 </section>
 
 <section class="section">
+  <div class="section-header">
+    <h2>Releases</h2>
+    <div class="section-note">Current and forthcoming albums</div>
+  </div>
 
-<h2>Releases</h2>
+  <div class="releases">
+    <div class="card">
+      <img src="images/everything-rewinds.jpg" alt="Everything Rewinds">
+      <div class="card-content">
+        <h3>Everything Rewinds</h3>
+        <p>Contemporary adaptations of selected works by George Frideric Handel.</p>
+        <a class="button" href="#">View Album →</a>
+      </div>
+    </div>
 
-<div class="releases">
+    <div class="card">
+      <img src="images/singing-still.jpg" alt="Singing Still">
+      <div class="card-content">
+        <h3>Singing Still</h3>
+        <p>Selected pieces from Handel's oratorios.</p>
+        <a class="button" href="#">Coming Soon</a>
+      </div>
+    </div>
 
-<div class="card">
-<img src="images/everything-rewinds.jpg" alt="Everything Rewinds">
-
-<div class="card-content">
-<h3>Everything Rewinds</h3>
-<p>
-Contemporary adaptations of selected works by George Frideric Handel.
-</p>
-
-<a class="button" href="#">
-View Album →
-</a>
-</div>
-</div>
-
-<div class="card">
-<img src="images/singing-still.jpg" alt="Singing Still">
-
-<div class="card-content">
-<h3>Singing Still</h3>
-<p>
-Selected pieces from Handel's oratorios.
-</p>
-
-<a class="button" href="#">
-Coming Soon
-</a>
-</div>
-</div>
-
-<div class="card">
-<img src="images/vivaldi-now.jpg" alt="Vivaldi Now">
-
-<div class="card-content">
-<h3>Vivaldi Now</h3>
-<p>
-Selections from Vivaldi's sacred and operatic works.
-</p>
-
-<a class="button" href="#">
-Coming Soon
-</a>
-</div>
-</div>
-
-</div>
-
+    <div class="card">
+      <img src="images/vivaldi-now.jpg" alt="Vivaldi Now">
+      <div class="card-content">
+        <h3>Vivaldi Now</h3>
+        <p>Selections from Vivaldi's sacred and operatic works.</p>
+        <a class="button" href="#">Coming Soon</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer class="footer">
-
-© The Handel Project
-
+  © The Handel Project
 </footer>
 
 </body>
