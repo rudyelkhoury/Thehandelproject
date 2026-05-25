@@ -1,11 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>The Handel Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Handel Project</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d0d0d;
+    color:#f2f2f2;
+    font-family: Georgia, serif;
+    line-height:1.6;
+}
+
+.hero{
+    height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.70)
+        ),
+        url("images/hero-london.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:800px;
+    padding:2rem;
+}
+
+.hero h1{
+    font-size:4rem;
+    letter-spacing:.15em;
+    margin-bottom:1rem;
+    font-weight:300;
+}
+
+.tagline{
+    color:#d4b36a;
+    font-size:1.2rem;
+    margin-bottom:2rem;
+    letter-spacing:.08em;
+}
+
+.statement{
+    max-width:700px;
+    margin:auto;
+    color:#dddddd;
+    font-size:1rem;
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:6rem 2rem;
+}
+
+.section h2{
+    font-size:2rem;
+    margin-bottom:3rem;
+    font-weight:300;
+    text-align:center;
+}
+
+.releases{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:3rem;
+}
+
+.card{
+    background:#141414;
+    border:1px solid #222;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card-content{
+    padding:1.5rem;
+}
+
+.card h3{
+    margin-bottom:.5rem;
+    font-size:1.5rem;
+    font-weight:400;
+}
+
+.card p{
+    color:#cccccc;
+    margin-bottom:1rem;
+}
+
+.button{
+    display:inline-block;
+    text-decoration:none;
+    color:#d4b36a;
+}
+
+.footer{
+    text-align:center;
+    color:#777;
+    padding:4rem 2rem;
+    border-top:1px solid #222;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .tagline{
+        font-size:1rem;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
-  <h1>The Handel Project</h1>
-  <p>Recasting Baroque voices in contemporary sonic landscapes.</p>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>THE HANDEL PROJECT</h1>
+
+<div class="tagline">
+Recasting Baroque voices in contemporary sonic landscapes
+</div>
+
+<div class="statement">
+
+The Handel Project is a recording vehicle created by Rodolphe El Khoury to bring the music of George Frideric Handel and other Baroque composers into a contemporary sonic landscape. The project translates selected works into a modern idiom through new arrangements that preserve their underlying structure and emotional character while reconfiguring their musical surface.
+
+<br><br>
+
+Using digital production techniques and AI-assisted performance, The Handel Project bridges historical material and present-day sound practices. It does not seek to reproduce the originals, but to extend them—retaining their expressive logic while situating them within contemporary modes of listening and production.
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Releases</h2>
+
+<div class="releases">
+
+<div class="card">
+<img src="images/everything-rewinds.jpg" alt="Everything Rewinds">
+
+<div class="card-content">
+<h3>Everything Rewinds</h3>
+<p>
+Contemporary adaptations of selected works by George Frideric Handel.
+</p>
+
+<a class="button" href="#">
+View Album →
+</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/singing-still.jpg" alt="Singing Still">
+
+<div class="card-content">
+<h3>Singing Still</h3>
+<p>
+Selected pieces from Handel's oratorios.
+</p>
+
+<a class="button" href="#">
+Coming Soon
+</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/vivaldi-now.jpg" alt="Vivaldi Now">
+
+<div class="card-content">
+<h3>Vivaldi Now</h3>
+<p>
+Selections from Vivaldi's sacred and operatic works.
+</p>
+
+<a class="button" href="#">
+Coming Soon
+</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+© The Handel Project
+
+</footer>
+
 </body>
 </html>
