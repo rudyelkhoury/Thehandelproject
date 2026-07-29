@@ -1,242 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Handel Project</title>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  background:#0b0b0b;
-  color:#f1f1f1;
-  font-family:Arial, Helvetica, sans-serif;
-  line-height:1.55;
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   The Handel Project
+  </title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
 }
 
-.hero{
-  min-height:78vh;
-  display:flex;
-  align-items:center;
-  background:
-    linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.25) 100%),
+body {
+  background: #0b0b0b;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.55;
+}
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.25) 100%),
     url("images/hero-london.jpg");
-  background-size:cover;
-  background-position:center;
-  padding:4rem 7vw;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 7vw;
 }
 
-.hero-content{
-  max-width:620px;
+.hero-content {
+  max-width: 620px;
 }
 
-h1{
-  font-family:Georgia, serif;
-  font-size:4.2rem;
-  font-weight:300;
-  letter-spacing:.08em;
-  line-height:1;
-  margin-bottom:1.2rem;
+h1 {
+  font-family: Georgia, serif;
+  font-size: 4.2rem;
+  font-weight: 300;
+  letter-spacing: .08em;
+  line-height: 1;
+  margin-bottom: 1.2rem;
 }
 
-.tagline{
-  color:#d6b35f;
-  font-size:1.15rem;
-  letter-spacing:.08em;
-  margin-bottom:2rem;
+.tagline {
+  color: #d6b35f;
+  font-size: 1.15rem;
+  letter-spacing: .08em;
+  margin-bottom: 2rem;
 }
 
-.statement{
-  color:#d8d8d8;
-  font-size:1rem;
-  max-width:580px;
-  transform:translateY(60px);
+.statement {
+  color: #d8d8d8;
+  font-size: 1rem;
+  max-width: 580px;
+  transform: translateY(60px);
 }
 
-.section{
-  max-width:1180px;
-  margin:auto;
-  padding:4rem 5vw 5rem;
+.section {
+  max-width: 1180px;
+  margin: auto;
+  padding: 4rem 5vw 5rem;
 }
 
-.section-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  margin-bottom:2rem;
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 2rem;
 }
 
-.section h2{
-  font-family:Georgia, serif;
-  font-size:2.2rem;
-  font-weight:300;
+.section h2 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 300;
 }
 
-.section-note{
-  color:#888;
-  font-size:.9rem;
+.section-note {
+  color: #888;
+  font-size: .9rem;
 }
 
-.releases{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1.6rem;
+.releases {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.6rem;
 }
 
-.card{
-  background:#141414;
-  border:1px solid #252525;
+.card {
+  background: #141414;
+  border: 1px solid #252525;
 }
 
-.card img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  display:block;
-  filter:grayscale(100%);
+.card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
 }
 
-.card-content{
-  padding:1.25rem;
+.card-content {
+  padding: 1.25rem;
 }
 
-.card h3{
-  font-family:Arial, Helvetica, sans-serif;
-  font-size:1.45rem;
-  font-weight:400;
-  margin-bottom:.4rem;
-  letter-spacing:.01em;
+.card h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  margin-bottom: .4rem;
+  letter-spacing: .01em;
 }
 
-.card p{
-  color:#c8c8c8;
-  font-size:.95rem;
-  margin-bottom:1rem;
-}
-.listen-links{
-  margin-top:0.8rem;
-  margin-bottom:1rem;
-  font-size:0.9rem;
+.card p {
+  color: #c8c8c8;
+  font-size: .95rem;
+  margin-bottom: 1rem;
 }
 
-.listen-links a{
-  color:#d6b35f;
-  text-decoration:none;
+.listen-links {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
-.listen-links a:hover{
-  text-decoration:underline;
-}
-.button{
-  color:#d6b35f;
-  text-decoration:none;
-  font-size:.9rem;
-  letter-spacing:.04em;
+.listen-links a {
+  color: #d6b35f;
+  text-decoration: none;
 }
 
-.footer{
-  padding:2.5rem 5vw;
-  color:#777;
-  border-top:1px solid #222;
-  font-size:.85rem;
+.listen-links a:hover {
+  text-decoration: underline;
 }
 
-@media(max-width:900px){
-  .releases{grid-template-columns:1fr}
-  .card img{height:380px}
-  h1{font-size:3rem}
-  .hero{min-height:72vh}
-  .section-header{display:block}
-  .section-note{margin-top:.5rem}
+.button {
+  color: #d6b35f;
+  text-decoration: none;
+  font-size: .9rem;
+  letter-spacing: .04em;
+}
+
+.footer {
+  padding: 2.5rem 5vw;
+  color: #777;
+  border-top: 1px solid #222;
+  font-size: .85rem;
+}
+
+@media(max-width:900px) {
+  .releases {
+    grid-template-columns: 1fr
+  }
+
+  .card img {
+    height: 380px
+  }
+
+  h1 {
+    font-size: 3rem
+  }
+
+  .hero {
+    min-height: 72vh
+  }
+
+  .section-header {
+    display: block
+  }
+
+  .section-note {
+    margin-top: .5rem
+  }
+
 }
 </style>
-</head>
-
-<body>
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>THE HANDEL PROJECT</h1>
-    <div class="tagline">Recasting Baroque voices in contemporary sonic landscapes</div>
-
+ </head>
+ <body>
+  <section class="hero">
+   <div class="hero-content">
+    <h1>
+     THE HANDEL PROJECT
+    </h1>
+    <div class="tagline">
+     Recasting Baroque voices in contemporary sonic landscapes
+    </div>
     <div class="statement">
-      The Handel Project is a recording vehicle created by Rodolphe El Khoury to bring the music of George Frideric Handel and other Baroque composers into a contemporary sonic landscape. The project translates selected works into a modern idiom through new arrangements that preserve their underlying structure and emotional character while reconfiguring their musical surface.
-      <br><br>
-      Using digital production techniques and AI-assisted performance, The Handel Project bridges historical material and present-day sound practices. It does not seek to reproduce the originals, but to extend them—retaining their expressive logic while situating them within contemporary modes of listening and production.
+     The Handel Project is a recording vehicle created by Rodolphe El Khoury to bring the music of George Frideric Handel and other Baroque composers into a contemporary sonic landscape. The project translates selected works into a modern idiom through new arrangements that preserve their underlying structure and emotional character while reconfiguring their musical surface.
+     <br/>
+     <br/>
+     Using digital production techniques and AI-assisted performance, The Handel Project bridges historical material and present-day sound practices. It does not seek to reproduce the originals, but to extend them—retaining their expressive logic while situating them within contemporary modes of listening and production.
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-header">
-    <h2>Releases</h2>
-    <div class="section-note">Current and forthcoming albums</div>
-  </div>
-
-  <div class="releases">
+   </div>
+  </section>
+  <section class="section">
+   <div class="section-header">
+    <h2>
+     Releases
+    </h2>
+    <div class="section-note">
+     Current and forthcoming albums
+    </div>
+   </div>
+   <div class="releases">
     <div class="card">
-      <img src="images/everything-rewinds.jpg" alt="Everything Rewinds">
-      <div class="card-content">
-        <h3>Everything Rewinds</h3>
-        <p>Adaptations of selected works by George Frideric Handel.</p>
-       <p class="listen-links">
-  <a href="https://open.spotify.com/album/53aq1mT7awfBGQrpb9esvK?si=Ro0HdJ5fR3SNNP6YgNGJZw" target="_blank">Spotify</a>
-  ·
-  <a href="https://music.apple.com/us/album/everything-rewinds/6771570868" target="_blank">Apple Music</a>
-  ·
-  <a href="https://youtube.com/playlist?list=OLAK5uy_kk8StGhL0zQ-H5DztSce3saTWZs_3ZkhI&si=QnZRCqksfCtocFcl" target="_blank">YouTube</a>
-</p>
-        <a class="button" href="everything-rewinds.html">View Album →</a>
-      </div>
+     <img alt="Everything Rewinds" src="images/everything-rewinds.jpg"/>
+     <div class="card-content">
+      <h3>
+       Everything Rewinds
+      </h3>
+      <p>
+       Adaptations of selected works by George Frideric Handel.
+      </p>
+      <p class="listen-links">
+       <a href="https://open.spotify.com/album/53aq1mT7awfBGQrpb9esvK?si=Ro0HdJ5fR3SNNP6YgNGJZw" target="_blank">
+        Spotify
+       </a>
+       ·
+       <a href="https://music.apple.com/us/album/everything-rewinds/6771570868" target="_blank">
+        Apple Music
+       </a>
+       ·
+       <a href="https://youtube.com/playlist?list=OLAK5uy_kk8StGhL0zQ-H5DztSce3saTWZs_3ZkhI&amp;si=QnZRCqksfCtocFcl" target="_blank">
+        YouTube
+       </a>
+      </p>
+      <a class="button" href="everything-rewinds.html">
+       View Album →
+      </a>
+     </div>
     </div>
-
     <div class="card">
-      <img src="images/again-not-like-before-thumbnail.jpg" alt="Again, Not Like Before">
-      <div class="card-content">
-        <h3>Again, Not Like Before</h3>
-        <p>Adaptations of selected works from Handel's oratorios and sacred music.</p>
-        <p class="listen-links">
-          <a href="https://open.spotify.com/album/4hkvzb0Uw4PG7bSd2rT0rm?si=i5Rtsk_hSqWRGm7DQEtTbw" target="_blank">Spotify</a>
-          ·
-          <a href="https://music.apple.com/us/album/again-not-like-before/6785706745" target="_blank">Apple Music</a>
-          ·
-          <a href="https://youtube.com/playlist?list=OLAK5uy_lJ41NzT6mREccCBqFBQD9InGiNDrJYJt4&si=4Qfk7JXMZN98xy5i" target="_blank">YouTube</a>
-        </p>
-        <a class="button" href="again-not-like-before.html">View Album →</a>
-      </div>
+     <img alt="Again, Not Like Before" src="images/again-not-like-before-thumbnail.jpg"/>
+     <div class="card-content">
+      <h3>
+       Again, Not Like Before
+      </h3>
+      <p>
+       Adaptations of selected works from Handel's oratorios and sacred music.
+      </p>
+      <p class="listen-links">
+       <a href="https://open.spotify.com/album/4hkvzb0Uw4PG7bSd2rT0rm?si=i5Rtsk_hSqWRGm7DQEtTbw" target="_blank">
+        Spotify
+       </a>
+       ·
+       <a href="https://music.apple.com/us/album/again-not-like-before/6785706745" target="_blank">
+        Apple Music
+       </a>
+       ·
+       <a href="https://youtube.com/playlist?list=OLAK5uy_lJ41NzT6mREccCBqFBQD9InGiNDrJYJt4&amp;si=4Qfk7JXMZN98xy5i" target="_blank">
+        YouTube
+       </a>
+      </p>
+      <a class="button" href="again-not-like-before.html">
+       View Album →
+      </a>
+     </div>
     </div>
-
     <div class="card">
-      <img src="images/cantata.jpg" alt="Cantata">
-      <div class="card-content">
-        <h3>Cantata</h3>
-        <p>A concept album arranging Handel's opera arias into a contemporary cantata.</p>
-        <p class="listen-links">
-          <a href="#" target="_blank">Spotify</a>
-          ·
-          <a href="#" target="_blank">Apple Music</a>
-          ·
-          <a href="#" target="_blank">YouTube</a>
-        </p>
-        <a class="button" href="cantata.html">View Album →</a>
-      </div>
+     <img alt="Cantata" src="images/cantata.jpg"/>
+     <div class="card-content">
+      <h3>
+       Cantata
+      </h3>
+      <p>
+       A concept album arranging Handel's opera arias into a contemporary cantata.
+      </p>
+      <p class="listen-links">
+       <a href="https://open.spotify.com/album/5tra0zKXYefXSTxMZtxqGf?si=j4KyZhzfRRqqOk4IyIxHzg" rel="noopener noreferrer" target="_blank">
+        Spotify
+       </a>
+       ·
+       <a href="https://music.apple.com/us/album/cantata-ep/6795259182" rel="noopener noreferrer" target="_blank">
+        Apple Music
+       </a>
+       ·
+       <a href="https://www.youtube.com/channel/UCl4N-OeetKGpzT2I1x5YF3w" rel="noopener noreferrer" target="_blank">
+        YouTube
+       </a>
+      </p>
+      <a class="button" href="cantata.html">
+       View Album →
+      </a>
+     </div>
     </div>
-
     <div class="card">
-      <img src="images/vivaldi-now.jpg" alt="Vivaldi Now">
-      <div class="card-content">
-        <h3>Vivaldi Now</h3>
-        <p>Adaptations of selected pieces from Vivaldi's sacred and operatic works.</p>
-        <a class="button" href="#">Coming Soon</a>
-      </div>
+     <img alt="Vivaldi Now" src="images/vivaldi-now.jpg"/>
+     <div class="card-content">
+      <h3>
+       Vivaldi Now
+      </h3>
+      <p>
+       Adaptations of selected pieces from Vivaldi's sacred and operatic works.
+      </p>
+      <a class="button" href="#">
+       Coming Soon
+      </a>
+     </div>
     </div>
-  </div>
-</section>
-
-<footer class="footer">
-  © The Handel Project
-</footer>
-
-</body>
+   </div>
+  </section>
+  <footer class="footer">
+   © The Handel Project
+  </footer>
+ </body>
 </html>

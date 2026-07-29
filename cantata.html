@@ -1,32 +1,1132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cantata — The Handel Project</title>
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0b0b0b;color:#e7e7e7;font-family:Arial,Helvetica,sans-serif;line-height:1.65}a{color:#d6b35f;text-decoration:none}a:hover{text-decoration:underline}.hero{min-height:78vh;display:flex;align-items:flex-end;position:relative;background:linear-gradient(90deg,rgba(5,5,5,.94) 0%,rgba(5,5,5,.78) 35%,rgba(5,5,5,.25) 67%,rgba(5,5,5,.15) 100%),url("images/cantata-hero.jpg") center center/cover no-repeat}.hero-content{width:min(1180px,90vw);margin:0 auto;padding:8rem 0 6rem}.album-label{color:#d6b35f;text-transform:uppercase;letter-spacing:.16em;font-size:.82rem;margin-bottom:1rem}h1,h2,summary{font-family:Georgia,"Times New Roman",serif;font-weight:normal}h1{margin:0;font-size:5.2rem;line-height:.95;max-width:760px}.year{margin-top:1.25rem;color:#aaa;letter-spacing:.08em}.streaming-links{display:flex;gap:.7rem;align-items:center;margin-top:1.5rem;flex-wrap:wrap}.streaming-links a[aria-disabled="true"]{color:#777;pointer-events:none}.section{width:min(1000px,90vw);margin:0 auto;padding:5rem 0}.section+.section{border-top:1px solid #222}h2{font-size:2.2rem;margin:0 0 2rem}.description{max-width:820px;color:#d0d0d0;font-size:1.04rem}.description h3{color:#d6b35f;font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:1.35rem;margin:2.4rem 0 .75rem}.description p{margin:0 0 1.25rem}.credit{margin-top:2.5rem;color:#999;font-size:.94rem}details{background:#141414;border:1px solid #252525;margin-bottom:1rem}summary{cursor:pointer;padding:1rem 1.25rem;font-size:1.2rem}.track-content{padding:0 1.25rem 1.4rem;color:#d0d0d0}.track-content h4{margin-top:1.35rem;margin-bottom:.55rem;color:#d6b35f;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}.source-title{font-family:Georgia,"Times New Roman",serif;font-size:1.08rem}.metadata{margin:.9rem 0 1.4rem;display:grid;grid-template-columns:max-content 1fr;gap:.25rem 1rem;max-width:620px}.metadata dt{color:#999}.metadata dd{margin:0}.credit-line{color:#999;font-size:.9rem;margin-top:0}.lyric-block{font-family:Georgia,"Times New Roman",serif;font-size:1.05rem;line-height:1.75;color:#d8d8d8;margin-top:.5rem;margin-bottom:1.5rem}.track-listen{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap;margin-top:.35rem}.track-listen a[aria-disabled="true"]{color:#777;pointer-events:none}details{scroll-margin-top:1rem}.back-link{display:inline-block;margin-bottom:2rem}.footer{padding:3rem 5vw;text-align:center;border-top:1px solid #222;color:#777;font-size:.88rem}@media(max-width:900px){.hero{min-height:70vh;background-position:62% center}.hero-content{padding:7rem 0 4rem}h1{font-size:3.2rem}.section{padding:3.5rem 0}.metadata{grid-template-columns:1fr;gap:.05rem}.metadata dd{margin-bottom:.45rem}}
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Cantata — The Handel Project
+  </title>
+  <style>
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #e7e7e7;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: 1.65
+}
+
+a {
+  color: #d6b35f;
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  background: linear-gradient(90deg,rgba(5,5,5,.94) 0%,rgba(5,5,5,.78) 35%,rgba(5,5,5,.25) 67%,rgba(5,5,5,.15) 100%),url("images/cantata-hero.jpg") center center/cover no-repeat
+}
+
+.hero-content {
+  width: min(1180px,90vw);
+  margin: 0 auto;
+  padding: 8rem 0 6rem
+}
+
+.album-label {
+  color: #d6b35f;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .82rem;
+  margin-bottom: 1rem
+}
+
+h1,h2,summary {
+  font-family: Georgia,"Times New Roman",serif;
+  font-weight: normal
+}
+
+h1 {
+  margin: 0;
+  font-size: 5.2rem;
+  line-height: .95;
+  max-width: 760px
+}
+
+.year {
+  margin-top: 1.25rem;
+  color: #aaa;
+  letter-spacing: .08em
+}
+
+.streaming-links {
+  display: flex;
+  gap: .7rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap
+}
+
+.streaming-links a[aria-disabled="true"] {
+  color: #777;
+  pointer-events: none
+}
+
+.section {
+  width: min(1000px,90vw);
+  margin: 0 auto;
+  padding: 5rem 0
+}
+
+.section+.section {
+  border-top: 1px solid #222
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin: 0 0 2rem
+}
+
+.description {
+  max-width: 820px;
+  color: #d0d0d0;
+  font-size: 1.04rem
+}
+
+.description h3 {
+  color: #d6b35f;
+  font-family: Georgia,"Times New Roman",serif;
+  font-weight: normal;
+  font-size: 1.35rem;
+  margin: 2.4rem 0 .75rem
+}
+
+.description p {
+  margin: 0 0 1.25rem
+}
+
+.credit {
+  margin-top: 2.5rem;
+  color: #999;
+  font-size: .94rem
+}
+
+details {
+  background: #141414;
+  border: 1px solid #252525;
+  margin-bottom: 1rem
+}
+
+summary {
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  font-size: 1.2rem
+}
+
+.track-content {
+  padding: 0 1.25rem 1.4rem;
+  color: #d0d0d0
+}
+
+.track-content h4 {
+  margin-top: 1.35rem;
+  margin-bottom: .55rem;
+  color: #d6b35f;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .08em
+}
+
+.source-title {
+  font-family: Georgia,"Times New Roman",serif;
+  font-size: 1.08rem
+}
+
+.metadata {
+  margin: .9rem 0 1.4rem;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: .25rem 1rem;
+  max-width: 620px
+}
+
+.metadata dt {
+  color: #999
+}
+
+.metadata dd {
+  margin: 0
+}
+
+.credit-line {
+  color: #999;
+  font-size: .9rem;
+  margin-top: 0
+}
+
+.lyric-block {
+  font-family: Georgia,"Times New Roman",serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #d8d8d8;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem
+}
+
+.track-listen {
+  display: flex;
+  gap: .65rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: .35rem
+}
+
+.track-listen a[aria-disabled="true"] {
+  color: #777;
+  pointer-events: none
+}
+
+details {
+  scroll-margin-top: 1rem
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem
+}
+
+.footer {
+  padding: 3rem 5vw;
+  text-align: center;
+  border-top: 1px solid #222;
+  color: #777;
+  font-size: .88rem
+}
+
+@media(max-width:900px) {
+  .hero {
+    min-height: 70vh;
+    background-position: 62% center
+  }
+
+  .hero-content {
+    padding: 7rem 0 4rem
+  }
+
+  h1 {
+    font-size: 3.2rem
+  }
+
+  .section {
+    padding: 3.5rem 0
+  }
+
+  .metadata {
+    grid-template-columns: 1fr;
+    gap: .05rem
+  }
+
+  .metadata dd {
+    margin-bottom: .45rem
+  }
+
+}
 </style>
-</head>
-<body>
-<section class="hero"><div class="hero-content"><div class="album-label">The Handel Project</div><h1>Cantata</h1><div class="year">2026</div><div class="streaming-links"><a href="#" aria-disabled="true">Spotify</a><span>·</span><a href="#" aria-disabled="true">Apple Music</a><span>·</span><a href="#" aria-disabled="true">YouTube</a></div></div></section>
-<section class="section"><h2>About the Work</h2><div class="description">
-<p><strong>Cantata</strong> is a continuous dramatic work assembled from arias drawn from different operas by George Frideric Handel. Unlike the earlier albums in The Handel Project, it does not begin with the meanings of Handel’s original texts. It relocates the arias within an entirely new dramatic field, allowing their emotional and structural functions to generate another work.</p>
-<h3>A Contemporary Pasticcio</h3><p>The work follows the eighteenth-century practice of the <em>pasticcio</em>: an opera or dramatic entertainment assembled from existing musical numbers, often taken from different sources and reorganized around a new context. Here, four Handel arias and an instrumental prologue are arranged as a five-movement cantata. Their original plots disappear, but the dramatic intelligence carried by the music remains.</p>
-<h3>Dramaturgical Adaptation</h3><p>Rather than adapting what the original words mean, <strong>Cantata</strong> adapts what the music does. Each aria was selected for the role it could perform within the larger dramatic architecture: remembrance, endurance, crisis, and continuance. The source music is treated not simply as historical material, but as a dramaturgical structure capable of supporting a new narrative.</p><p>Musically, <strong>Cantata</strong> extends the adaptive approach of the earlier albums while taking greater liberties with its sources. Handel's arias remain the point of departure, but they are often transformed rather than directly quoted, becoming inspirations for new musical settings rooted in contemporary electronica. Only <em>Stille amare</em> remains closely aligned with the original score, preserving a more direct connection to Handel's musical language.</p>
-<h3>Emotional Architecture</h3><p>In opera seria, recitative advances the action while the aria suspends it. The aria dwells within a single emotional condition, expanding a moment beyond ordinary dramatic time. <strong>Cantata</strong> preserves this distinction. The songs do not explain events or carry plot. They function as emotional spaces in which memory, care, exhaustion, uncertainty, and persistence can unfold.</p>
-<h3>An Open Narrative</h3><p>The work suggests a life marked by intimacy, illness, absence, and an irreversible decision, but it does not define the circumstances or assign a moral verdict. Its narrative remains deliberately incomplete. The listener is invited to reconstruct the relationships between the movements and to decide what may have happened in the spaces between them.</p>
-<h3>Two Realizations</h3><p><strong>Cantata</strong> was conceived simultaneously as an album and as a theatrical work. The album presents the music alone, leaving the dramatic field open. A staged realization introduces newly written spoken monologues between the movements. These texts function as contemporary recitatives: they advance the situation only far enough to create the conditions from which the next aria emerges. The musical sequence remains unchanged; only the degree of narrative specificity differs.</p>
-<h3>Listening</h3><p>The five movements form a single arc. The instrumental <strong>Prologue</strong> introduces the musical material of <em>Stille amare</em>, which returns at the center of the work in <strong>One More Day</strong>. Around that axis, the sequence moves through recollection, endurance, crisis, and a final return to ordinary ritual. The ending offers no resolution. It leaves only continuation.</p>
-<div class="credit">Conceived, adapted, written, and produced by Rodolphe El-Khoury.</div></div></section>
-<section class="section"><h2>Movements</h2>
-<details id="prologue"><summary>I. Prologue</summary><div class="track-content"><h4>Source</h4><p class="source-title"><strong><em>Stille amare</em></strong><br>from <em>Tolomeo, Re d’Egitto</em>, HWV 25<br>Opera seria, 1728</p><dl class="metadata"><dt>Composer</dt><dd>George Frideric Handel</dd><dt>Original Context</dt><dd>Act III, Scene VI</dd><dt>Key</dt><dd>B-flat minor</dd><dt>Tempo</dt><dd><em>Larghetto</em></dd></dl><h4>About This Movement</h4><p>An instrumental adaptation of <em>Stille amare</em>, introducing the musical material that returns in the central movement, <strong>One More Day</strong>.</p><h4>Listen</h4><div class="track-listen"><a href="#" aria-disabled="true">Spotify</a><span>·</span><a href="#" aria-disabled="true">Apple Music</a><span>·</span><a href="#" aria-disabled="true">YouTube</a></div></div></details>
-<details id="a-day-became-our-day"><summary>II. A Day Became Our Day</summary><div class="track-content"><h4>Source</h4><p class="source-title"><strong><em>Vieni, o figlio</em></strong><br>from <em>Ottone</em>, HWV 15<br>Opera, 1723</p><dl class="metadata"><dt>Composer</dt><dd>George Frideric Handel</dd><dt>Original Context</dt><dd>Act II, Scene IV</dd><dt>Version</dt><dd>1723 premiere</dd><dt>Key</dt><dd>E major</dd><dt>Tempo</dt><dd><em>Largo</em> → <em>Adagio</em></dd><dt>Structure</dt><dd><em>Da capo</em></dd></dl><h4>New Lyrics</h4><p class="credit-line">By Rodolphe El-Khoury</p><div class="lyric-block">You never trust<br>the first turn of the key.<br>You’d wait before you entered.<br>I’d already be in.<br>You’d check the lock again.<br>I’d say once was fine.<br>You’d keep the hallway dark.<br>I’d switch another light.<br>You’d leave your shoes behind.<br>I’d still be wearing mine.<br><br>I never thought to ask<br>why any of it mattered.<br>It simply was the way<br>a day became our day.<br><br>You’d read beside me late,<br>I’d learn to love the light.<br>You’d stop before the ending<br>to tell me what you thought.<br>I’d hear it differently,<br>you’d smile and let it stand.<br>You’d play the record twice.<br>I’d wait until it stayed.<br>We’d sit without a word,<br>until one of us smiled.<br><br>We’d both say “beautiful!”<br>never knowing<br>what was meant.<br>We’d answer “yes” together,<br>not knowing what was asked.<br><br>It simply was the way<br>a day became our day.</div><h4>Listen</h4><div class="track-listen"><a href="#" aria-disabled="true">Spotify</a><span>·</span><a href="#" aria-disabled="true">Apple Music</a><span>·</span><a href="#" aria-disabled="true">YouTube</a></div></div></details>
-<details id="one-more-day"><summary>III. One More Day</summary><div class="track-content"><h4>Source</h4><p class="source-title"><strong><em>Stille amare</em></strong><br>from <em>Tolomeo, Re d’Egitto</em>, HWV 25<br>Opera seria, 1728</p><dl class="metadata"><dt>Composer</dt><dd>George Frideric Handel</dd><dt>Original Context</dt><dd>Act III, Scene VI</dd><dt>Key</dt><dd>B-flat minor</dd><dt>Tempo</dt><dd><em>Larghetto</em></dd></dl><h4>New Lyrics</h4><p class="credit-line">By Rodolphe El-Khoury</p><div class="lyric-block">Hands remember<br>The mind gives way<br>Another morning<br>The same old way<br>Some days begin<br>before I’m there<br>Some never end<br>they simply wear<br>Yours comes first<br>Mine can wait<br>Slow enough<br>Not too late<br>The feet keep time<br>The heart comes through<br>Finish first<br>The will comes too<br>Almost resting<br>Not quite yet<br>One more turning<br>One more step<br>The same hands<br>The same way<br>Tomorrow comes<br>I do the same<br><br>It simply was the way<br>Things came to be<br>No answer<br>No change<br>Just enough<br>To carry one more day<br><br>Hands remember<br>The mind gives way<br>Another morning<br>The same old way<br>Some days begin<br>before I’m there<br>Some never end<br>they simply wear<br>Yours comes first<br>Mine can wait<br>Slow enough<br>Not too late<br>The feet keep time<br>The heart comes through<br>Finish first<br>The will comes too<br>Almost resting<br>Not quite yet<br>One more turning<br>One more step<br>The same hands<br>The same way<br>Tomorrow comes<br>I do the same</div><h4>Listen</h4><div class="track-listen"><a href="#" aria-disabled="true">Spotify</a><span>·</span><a href="#" aria-disabled="true">Apple Music</a><span>·</span><a href="#" aria-disabled="true">YouTube</a></div></div></details>
-<details id="what-was-that"><summary>IV. What Was That?</summary><div class="track-content"><h4>Source</h4><p class="source-title"><strong><em>Ah, mio cor!</em></strong><br>from <em>Alcina</em>, HWV 34<br>Opera seria, 1735</p><dl class="metadata"><dt>Composer</dt><dd>George Frideric Handel</dd><dt>Original Context</dt><dd>Act II, Scene VIII</dd><dt>Key</dt><dd>C minor</dd><dt>Tempo</dt><dd><em>Andante larghetto</em> → <em>Allegro</em></dd><dt>Structure</dt><dd><em>Dal segno</em></dd></dl><h4>New Lyrics</h4><p class="credit-line">By Rodolphe El-Khoury</p><div class="lyric-block">What was that?<br>What was that?<br>is it love<br>or is it fear<br>is it hope<br>or release<br>is it yours<br>or only mine<br>is it ending<br>or shut down<br><br>What was that?<br>can I know<br>what is true<br>can I tell<br>what I feel<br>can I trust<br>the silence<br>or forget<br>can it heal<br>can it break<br>what was whole<br>can it linger<br>or let go<br><br>What was that?<br>What was that?<br>was it love<br>or was it fear<br>was it hope<br>or relief<br>was it yours<br>or only mine<br>was it ending<br>or shutting down<br><br>What was that?<br>could I know<br>what was true<br>could I tell<br>what I felt<br>could I trust<br>the silence<br>or forget<br>could it heal<br>could it break<br>what was whole<br>could it linger<br>or let go</div><h4>Listen</h4><div class="track-listen"><a href="#" aria-disabled="true">Spotify</a><span>·</span><a href="#" aria-disabled="true">Apple Music</a><span>·</span><a href="#" aria-disabled="true">YouTube</a></div></div></details>
-<details id="morning"><summary>V. Morning</summary><div class="track-content"><h4>Source</h4><p class="source-title"><strong><em>Qual nave smarrita</em></strong><br>from <em>Radamisto</em>, HWV 12a<br>Opera seria, 1720</p><dl class="metadata"><dt>Composer</dt><dd>George Frideric Handel</dd><dt>Original Context</dt><dd>Act III, Scene VII</dd><dt>Key</dt><dd>G major</dd><dt>Tempo</dt><dd><em>Largo</em></dd><dt>Structure</dt><dd><em>Dal segno</em></dd></dl><h4>New Lyrics</h4><p class="credit-line">By Rodolphe El-Khoury</p><div class="lyric-block">Morning<br>finds the table<br>before anyone.<br>Books lie open<br>unfinished<br>yesterday’s wine, half-gone.<br>A record<br>still turns<br>without a sound.<br>The window<br>slips open<br>to the street beyond.<br><br>One more day<br>knows where to begin.<br><br>Darkness<br>keeps the hallway<br>for a while.<br>Old sneakers<br>wait by the door.<br>It’s time.<br>The handle<br>turns.<br>Daylight<br>pours in.<br>The key returns.<br>One turn.<br>The lock<br>asks again.<br>Are you<br>ready?<br>Morning says:<br>Come!</div><h4>Listen</h4><div class="track-listen"><a href="#" aria-disabled="true">Spotify</a><span>·</span><a href="#" aria-disabled="true">Apple Music</a><span>·</span><a href="#" aria-disabled="true">YouTube</a></div></div></details>
-</section>
-<section class="section"><a class="back-link" href="index.html">← Back to The Handel Project</a></section>
-<footer class="footer">© The Handel Project</footer>
-</body>
+ </head>
+ <body>
+  <section class="hero">
+   <div class="hero-content">
+    <div class="album-label">
+     The Handel Project
+    </div>
+    <h1>
+     Cantata
+    </h1>
+    <div class="year">
+     2026
+    </div>
+    <div class="streaming-links">
+     <a href="https://open.spotify.com/album/5tra0zKXYefXSTxMZtxqGf?si=j4KyZhzfRRqqOk4IyIxHzg" rel="noopener noreferrer" target="_blank">
+      Spotify
+     </a>
+     <span>
+      ·
+     </span>
+     <a href="https://music.apple.com/us/album/cantata-ep/6795259182" rel="noopener noreferrer" target="_blank">
+      Apple Music
+     </a>
+     <span>
+      ·
+     </span>
+     <a href="https://www.youtube.com/channel/UCl4N-OeetKGpzT2I1x5YF3w" rel="noopener noreferrer" target="_blank">
+      YouTube
+     </a>
+    </div>
+   </div>
+  </section>
+  <section class="section">
+   <h2>
+    About the Work
+   </h2>
+   <div class="description">
+    <p>
+     <strong>
+      Cantata
+     </strong>
+     is a continuous dramatic work assembled from arias drawn from different operas by George Frideric Handel. Unlike the earlier albums in The Handel Project, it does not begin with the meanings of Handel’s original texts. It relocates the arias within an entirely new dramatic field, allowing their emotional and structural functions to generate another work.
+    </p>
+    <h3>
+     A Contemporary Pasticcio
+    </h3>
+    <p>
+     The work follows the eighteenth-century practice of the
+     <em>
+      pasticcio
+     </em>
+     : an opera or dramatic entertainment assembled from existing musical numbers, often taken from different sources and reorganized around a new context. Here, four Handel arias and an instrumental prologue are arranged as a five-movement cantata. Their original plots disappear, but the dramatic intelligence carried by the music remains.
+    </p>
+    <h3>
+     Dramaturgical Adaptation
+    </h3>
+    <p>
+     Rather than adapting what the original words mean,
+     <strong>
+      Cantata
+     </strong>
+     adapts what the music does. Each aria was selected for the role it could perform within the larger dramatic architecture: remembrance, endurance, crisis, and continuance. The source music is treated not simply as historical material, but as a dramaturgical structure capable of supporting a new narrative.
+    </p>
+    <p>
+     Musically,
+     <strong>
+      Cantata
+     </strong>
+     extends the adaptive approach of the earlier albums while taking greater liberties with its sources. Handel's arias remain the point of departure, but they are often transformed rather than directly quoted, becoming inspirations for new musical settings rooted in contemporary electronica. Only
+     <em>
+      Stille amare
+     </em>
+     remains closely aligned with the original score, preserving a more direct connection to Handel's musical language.
+    </p>
+    <h3>
+     Two Realizations
+    </h3>
+    <p>
+     <strong>
+      Cantata
+     </strong>
+     was conceived simultaneously as an album and as a theatrical work. The album presents the music alone, leaving the dramatic field open. A staged realization introduces newly written spoken monologues between the movements. These texts function as contemporary recitatives: they advance the situation only far enough to create the conditions from which the next aria emerges. The musical sequence remains unchanged; only the degree of narrative specificity differs.
+    </p>
+    <div class="credit">
+     Conceived, adapted, written, and produced by Rodolphe El-Khoury.
+    </div>
+   </div>
+  </section>
+  <section class="section">
+   <h2>
+    Movements
+   </h2>
+   <details id="prologue">
+    <summary>
+     I. Prologue
+    </summary>
+    <div class="track-content">
+     <h4>
+      Source
+     </h4>
+     <p class="source-title">
+      <strong>
+       <em>
+        Stille amare
+       </em>
+      </strong>
+      <br/>
+      from
+      <em>
+       Tolomeo, Re d’Egitto
+      </em>
+      , HWV 25
+      <br/>
+      Opera seria, 1728
+     </p>
+     <dl class="metadata">
+      <dt>
+       Composer
+      </dt>
+      <dd>
+       George Frideric Handel
+      </dd>
+      <dt>
+       Original Context
+      </dt>
+      <dd>
+       Act III, Scene VI
+      </dd>
+      <dt>
+       Key
+      </dt>
+      <dd>
+       B-flat minor
+      </dd>
+      <dt>
+       Tempo
+      </dt>
+      <dd>
+       <em>
+        Larghetto
+       </em>
+      </dd>
+     </dl>
+     <h4>
+      About This Movement
+     </h4>
+     <p>
+      An instrumental adaptation of
+      <em>
+       Stille amare
+      </em>
+      , introducing the musical material that returns in the central movement,
+      <strong>
+       One More Day
+      </strong>
+      .
+     </p>
+     <h4>
+      Listen
+     </h4>
+     <div class="track-listen">
+      <a href="https://open.spotify.com/album/5tra0zKXYefXSTxMZtxqGf?si=j4KyZhzfRRqqOk4IyIxHzg" rel="noopener noreferrer" target="_blank">
+       Spotify
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://music.apple.com/us/album/cantata-ep/6795259182" rel="noopener noreferrer" target="_blank">
+       Apple Music
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://www.youtube.com/channel/UCl4N-OeetKGpzT2I1x5YF3w" rel="noopener noreferrer" target="_blank">
+       YouTube
+      </a>
+     </div>
+    </div>
+   </details>
+   <details id="a-day-became-our-day">
+    <summary>
+     II. A Day Became Our Day
+    </summary>
+    <div class="track-content">
+     <h4>
+      Source
+     </h4>
+     <p class="source-title">
+      <strong>
+       <em>
+        Vieni, o figlio
+       </em>
+      </strong>
+      <br/>
+      from
+      <em>
+       Ottone
+      </em>
+      , HWV 15
+      <br/>
+      Opera, 1723
+     </p>
+     <dl class="metadata">
+      <dt>
+       Composer
+      </dt>
+      <dd>
+       George Frideric Handel
+      </dd>
+      <dt>
+       Original Context
+      </dt>
+      <dd>
+       Act II, Scene IV
+      </dd>
+      <dt>
+       Version
+      </dt>
+      <dd>
+       1723 premiere
+      </dd>
+      <dt>
+       Key
+      </dt>
+      <dd>
+       E major
+      </dd>
+      <dt>
+       Tempo
+      </dt>
+      <dd>
+       <em>
+        Largo
+       </em>
+       →
+       <em>
+        Adagio
+       </em>
+      </dd>
+      <dt>
+       Structure
+      </dt>
+      <dd>
+       <em>
+        Da capo
+       </em>
+      </dd>
+     </dl>
+     <h4>
+      New Lyrics
+     </h4>
+     <p class="credit-line">
+      By Rodolphe El-Khoury
+     </p>
+     <div class="lyric-block">
+      You never trust
+      <br/>
+      the first turn of the key.
+      <br/>
+      You’d wait before you entered.
+      <br/>
+      I’d already be in.
+      <br/>
+      You’d check the lock again.
+      <br/>
+      I’d say once was fine.
+      <br/>
+      You’d keep the hallway dark.
+      <br/>
+      I’d switch another light.
+      <br/>
+      You’d leave your shoes behind.
+      <br/>
+      I’d still be wearing mine.
+      <br/>
+      <br/>
+      I never thought to ask
+      <br/>
+      why any of it mattered.
+      <br/>
+      It simply was the way
+      <br/>
+      a day became our day.
+      <br/>
+      <br/>
+      You’d read beside me late,
+      <br/>
+      I’d learn to love the light.
+      <br/>
+      You’d stop before the ending
+      <br/>
+      to tell me what you thought.
+      <br/>
+      I’d hear it differently,
+      <br/>
+      you’d smile and let it stand.
+      <br/>
+      You’d play the record twice.
+      <br/>
+      I’d wait until it stayed.
+      <br/>
+      We’d sit without a word,
+      <br/>
+      until one of us smiled.
+      <br/>
+      <br/>
+      We’d both say “beautiful!”
+      <br/>
+      never knowing
+      <br/>
+      what was meant.
+      <br/>
+      We’d answer “yes” together,
+      <br/>
+      not knowing what was asked.
+      <br/>
+      <br/>
+      It simply was the way
+      <br/>
+      a day became our day.
+     </div>
+     <h4>
+      Listen
+     </h4>
+     <div class="track-listen">
+      <a href="https://open.spotify.com/album/5tra0zKXYefXSTxMZtxqGf?si=j4KyZhzfRRqqOk4IyIxHzg" rel="noopener noreferrer" target="_blank">
+       Spotify
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://music.apple.com/us/album/cantata-ep/6795259182" rel="noopener noreferrer" target="_blank">
+       Apple Music
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://www.youtube.com/channel/UCl4N-OeetKGpzT2I1x5YF3w" rel="noopener noreferrer" target="_blank">
+       YouTube
+      </a>
+     </div>
+    </div>
+   </details>
+   <details id="one-more-day">
+    <summary>
+     III. One More Day
+    </summary>
+    <div class="track-content">
+     <h4>
+      Source
+     </h4>
+     <p class="source-title">
+      <strong>
+       <em>
+        Stille amare
+       </em>
+      </strong>
+      <br/>
+      from
+      <em>
+       Tolomeo, Re d’Egitto
+      </em>
+      , HWV 25
+      <br/>
+      Opera seria, 1728
+     </p>
+     <dl class="metadata">
+      <dt>
+       Composer
+      </dt>
+      <dd>
+       George Frideric Handel
+      </dd>
+      <dt>
+       Original Context
+      </dt>
+      <dd>
+       Act III, Scene VI
+      </dd>
+      <dt>
+       Key
+      </dt>
+      <dd>
+       B-flat minor
+      </dd>
+      <dt>
+       Tempo
+      </dt>
+      <dd>
+       <em>
+        Larghetto
+       </em>
+      </dd>
+     </dl>
+     <h4>
+      New Lyrics
+     </h4>
+     <p class="credit-line">
+      By Rodolphe El-Khoury
+     </p>
+     <div class="lyric-block">
+      Hands remember
+      <br/>
+      The mind gives way
+      <br/>
+      Another morning
+      <br/>
+      The same old way
+      <br/>
+      Some days begin
+      <br/>
+      before I’m there
+      <br/>
+      Some never end
+      <br/>
+      they simply wear
+      <br/>
+      Yours comes first
+      <br/>
+      Mine can wait
+      <br/>
+      Slow enough
+      <br/>
+      Not too late
+      <br/>
+      The feet keep time
+      <br/>
+      The heart comes through
+      <br/>
+      Finish first
+      <br/>
+      The will comes too
+      <br/>
+      Almost resting
+      <br/>
+      Not quite yet
+      <br/>
+      One more turning
+      <br/>
+      One more step
+      <br/>
+      The same hands
+      <br/>
+      The same way
+      <br/>
+      Tomorrow comes
+      <br/>
+      I do the same
+      <br/>
+      <br/>
+      It simply was the way
+      <br/>
+      Things came to be
+      <br/>
+      No answer
+      <br/>
+      No change
+      <br/>
+      Just enough
+      <br/>
+      To carry one more day
+      <br/>
+      <br/>
+      Hands remember
+      <br/>
+      The mind gives way
+      <br/>
+      Another morning
+      <br/>
+      The same old way
+      <br/>
+      Some days begin
+      <br/>
+      before I’m there
+      <br/>
+      Some never end
+      <br/>
+      they simply wear
+      <br/>
+      Yours comes first
+      <br/>
+      Mine can wait
+      <br/>
+      Slow enough
+      <br/>
+      Not too late
+      <br/>
+      The feet keep time
+      <br/>
+      The heart comes through
+      <br/>
+      Finish first
+      <br/>
+      The will comes too
+      <br/>
+      Almost resting
+      <br/>
+      Not quite yet
+      <br/>
+      One more turning
+      <br/>
+      One more step
+      <br/>
+      The same hands
+      <br/>
+      The same way
+      <br/>
+      Tomorrow comes
+      <br/>
+      I do the same
+     </div>
+     <h4>
+      Listen
+     </h4>
+     <div class="track-listen">
+      <a href="https://open.spotify.com/album/5tra0zKXYefXSTxMZtxqGf?si=j4KyZhzfRRqqOk4IyIxHzg" rel="noopener noreferrer" target="_blank">
+       Spotify
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://music.apple.com/us/album/cantata-ep/6795259182" rel="noopener noreferrer" target="_blank">
+       Apple Music
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://www.youtube.com/channel/UCl4N-OeetKGpzT2I1x5YF3w" rel="noopener noreferrer" target="_blank">
+       YouTube
+      </a>
+     </div>
+    </div>
+   </details>
+   <details id="what-was-that">
+    <summary>
+     IV. What Was That?
+    </summary>
+    <div class="track-content">
+     <h4>
+      Source
+     </h4>
+     <p class="source-title">
+      <strong>
+       <em>
+        Ah, mio cor!
+       </em>
+      </strong>
+      <br/>
+      from
+      <em>
+       Alcina
+      </em>
+      , HWV 34
+      <br/>
+      Opera seria, 1735
+     </p>
+     <dl class="metadata">
+      <dt>
+       Composer
+      </dt>
+      <dd>
+       George Frideric Handel
+      </dd>
+      <dt>
+       Original Context
+      </dt>
+      <dd>
+       Act II, Scene VIII
+      </dd>
+      <dt>
+       Key
+      </dt>
+      <dd>
+       C minor
+      </dd>
+      <dt>
+       Tempo
+      </dt>
+      <dd>
+       <em>
+        Andante larghetto
+       </em>
+       →
+       <em>
+        Allegro
+       </em>
+      </dd>
+      <dt>
+       Structure
+      </dt>
+      <dd>
+       <em>
+        Dal segno
+       </em>
+      </dd>
+     </dl>
+     <h4>
+      New Lyrics
+     </h4>
+     <p class="credit-line">
+      By Rodolphe El-Khoury
+     </p>
+     <div class="lyric-block">
+      What was that?
+      <br/>
+      What was that?
+      <br/>
+      is it love
+      <br/>
+      or is it fear
+      <br/>
+      is it hope
+      <br/>
+      or release
+      <br/>
+      is it yours
+      <br/>
+      or only mine
+      <br/>
+      is it ending
+      <br/>
+      or shut down
+      <br/>
+      <br/>
+      What was that?
+      <br/>
+      can I know
+      <br/>
+      what is true
+      <br/>
+      can I tell
+      <br/>
+      what I feel
+      <br/>
+      can I trust
+      <br/>
+      the silence
+      <br/>
+      or forget
+      <br/>
+      can it heal
+      <br/>
+      can it break
+      <br/>
+      what was whole
+      <br/>
+      can it linger
+      <br/>
+      or let go
+      <br/>
+      <br/>
+      What was that?
+      <br/>
+      What was that?
+      <br/>
+      was it love
+      <br/>
+      or was it fear
+      <br/>
+      was it hope
+      <br/>
+      or relief
+      <br/>
+      was it yours
+      <br/>
+      or only mine
+      <br/>
+      was it ending
+      <br/>
+      or shutting down
+      <br/>
+      <br/>
+      What was that?
+      <br/>
+      could I know
+      <br/>
+      what was true
+      <br/>
+      could I tell
+      <br/>
+      what I felt
+      <br/>
+      could I trust
+      <br/>
+      the silence
+      <br/>
+      or forget
+      <br/>
+      could it heal
+      <br/>
+      could it break
+      <br/>
+      what was whole
+      <br/>
+      could it linger
+      <br/>
+      or let go
+     </div>
+     <h4>
+      Listen
+     </h4>
+     <div class="track-listen">
+      <a href="https://open.spotify.com/album/5tra0zKXYefXSTxMZtxqGf?si=j4KyZhzfRRqqOk4IyIxHzg" rel="noopener noreferrer" target="_blank">
+       Spotify
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://music.apple.com/us/album/cantata-ep/6795259182" rel="noopener noreferrer" target="_blank">
+       Apple Music
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://www.youtube.com/channel/UCl4N-OeetKGpzT2I1x5YF3w" rel="noopener noreferrer" target="_blank">
+       YouTube
+      </a>
+     </div>
+    </div>
+   </details>
+   <details id="morning">
+    <summary>
+     V. Morning
+    </summary>
+    <div class="track-content">
+     <h4>
+      Source
+     </h4>
+     <p class="source-title">
+      <strong>
+       <em>
+        Qual nave smarrita
+       </em>
+      </strong>
+      <br/>
+      from
+      <em>
+       Radamisto
+      </em>
+      , HWV 12a
+      <br/>
+      Opera seria, 1720
+     </p>
+     <dl class="metadata">
+      <dt>
+       Composer
+      </dt>
+      <dd>
+       George Frideric Handel
+      </dd>
+      <dt>
+       Original Context
+      </dt>
+      <dd>
+       Act III, Scene VII
+      </dd>
+      <dt>
+       Key
+      </dt>
+      <dd>
+       G major
+      </dd>
+      <dt>
+       Tempo
+      </dt>
+      <dd>
+       <em>
+        Largo
+       </em>
+      </dd>
+      <dt>
+       Structure
+      </dt>
+      <dd>
+       <em>
+        Dal segno
+       </em>
+      </dd>
+     </dl>
+     <h4>
+      New Lyrics
+     </h4>
+     <p class="credit-line">
+      By Rodolphe El-Khoury
+     </p>
+     <div class="lyric-block">
+      Morning
+      <br/>
+      finds the table
+      <br/>
+      before anyone.
+      <br/>
+      Books lie open
+      <br/>
+      unfinished
+      <br/>
+      yesterday’s wine, half-gone.
+      <br/>
+      A record
+      <br/>
+      still turns
+      <br/>
+      without a sound.
+      <br/>
+      The window
+      <br/>
+      slips open
+      <br/>
+      to the street beyond.
+      <br/>
+      <br/>
+      One more day
+      <br/>
+      knows where to begin.
+      <br/>
+      <br/>
+      Darkness
+      <br/>
+      keeps the hallway
+      <br/>
+      for a while.
+      <br/>
+      Old sneakers
+      <br/>
+      wait by the door.
+      <br/>
+      It’s time.
+      <br/>
+      The handle
+      <br/>
+      turns.
+      <br/>
+      Daylight
+      <br/>
+      pours in.
+      <br/>
+      The key returns.
+      <br/>
+      One turn.
+      <br/>
+      The lock
+      <br/>
+      asks again.
+      <br/>
+      Are you
+      <br/>
+      ready?
+      <br/>
+      Morning says:
+      <br/>
+      Come!
+     </div>
+     <h4>
+      Listen
+     </h4>
+     <div class="track-listen">
+      <a href="https://open.spotify.com/album/5tra0zKXYefXSTxMZtxqGf?si=j4KyZhzfRRqqOk4IyIxHzg" rel="noopener noreferrer" target="_blank">
+       Spotify
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://music.apple.com/us/album/cantata-ep/6795259182" rel="noopener noreferrer" target="_blank">
+       Apple Music
+      </a>
+      <span>
+       ·
+      </span>
+      <a href="https://www.youtube.com/channel/UCl4N-OeetKGpzT2I1x5YF3w" rel="noopener noreferrer" target="_blank">
+       YouTube
+      </a>
+     </div>
+    </div>
+   </details>
+  </section>
+  <section class="section">
+   <a class="back-link" href="index.html">
+    ← Back to The Handel Project
+   </a>
+  </section>
+  <footer class="footer">
+   © The Handel Project
+  </footer>
+ </body>
 </html>
